@@ -1,0 +1,21 @@
+<div class="card card-body">
+  <h3>Agregar noticias</h3>
+  <form action="/tasks/add" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input type="text" class="form-control" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="details">Detalles</label>
+           <textarea class="form-control" name="details" required></textarea>
+    </div>  
+    <div class="form-group">
+      <label for="details">Imagen</label>
+      <input type="file" class="form-control" name="filename" required>
+    </div>
+
+    <button type="submit" class="btn btn-dark">
+      Agregar
+    </button>
+  </form>
+</div>

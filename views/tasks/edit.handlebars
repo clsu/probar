@@ -1,0 +1,29 @@
+{{#each errors}}
+  <div class="alert alert-danger">
+    {{text}}
+  </div>
+{{/each}}
+
+<div class="card card-body">
+  <h3>Editar noticias</h3>
+  
+  <form action="/tasks/edit/{{task._id}}?_method=PUT" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="PUT">
+     <img src="/public/uploads/{{task.filename}}" width="500" height="600">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input value="{{task.title}}" type="text" class="form-control" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="details">Detalles</label>
+      <textarea class="form-control" name="details" required>{{task.details}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="uploadimage">Imagen</label>
+      <input type="file" class="form-control" name="filename" required>
+    </div>
+    <button type="submit" class="btn btn-dark">
+      Guardar
+    </button>
+  </form>
+</div>

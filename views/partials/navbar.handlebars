@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg barraLogo">
+  <a class="navbar-brand" href="/"><h1>AgroSec</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/quienessomos">Quienes Sómos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contacto">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/noticias">Noticias</a>
+      </li>
+    </ul>
+
+    <!-- right items -->
+    <ul class="navbar-nav ml-auto">
+      {{#if user}}
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink">
+            Administrar noticias
+          </a>
+          <div class="dropdown-menu">
+            <a href="/tasks" class="dropdown-item">Editar y eliminar </a>
+            <a href="/tasks/add" class="dropdown-item">Agregar noticias</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="/users/logout" class="nav-link">Cerrar sesión</a>
+        </li>
+      {{else}}
+        <li class="nav-item">
+          <a href="/users/login" class="nav-link">Ingresar al Sistema</a>
+        </li>
+
+      {{/if}}
+    </ul>
+  </div>
+</nav>

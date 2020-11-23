@@ -1,0 +1,11 @@
+{{#each noticias}}
+  <div class="card card-body mb-2">
+    <img src="./public/uploads/{{filename}}" width="500" height="600">
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+    
+  </div>
+{{else}}
+<h1>{{title}}</h1>
+  <p> No se han creado tareas aún. </p>
+{{/each}}
